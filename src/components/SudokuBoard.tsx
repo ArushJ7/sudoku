@@ -115,7 +115,7 @@ export const SudokuBoard: React.FC<SudokuBoardProps> = ({
               >
                 {cell.value !== null ? (
                   <span
-                    className="text-xl sm:text-2xl leading-none"
+                    className="text-lg sm:text-2xl leading-none"
                     style={{
                       color: textColor,
                       fontWeight: fontWeight,
@@ -124,11 +124,11 @@ export const SudokuBoard: React.FC<SudokuBoardProps> = ({
                     {cell.value}
                   </span>
                 ) : cell.notes && cell.notes.length > 0 ? (
-                  <div className="grid grid-cols-3 grid-rows-3 w-full h-full p-0.5 pointer-events-none">
+                  <div className="grid grid-cols-3 grid-rows-3 w-full h-full p-[1px] sm:p-0.5 pointer-events-none">
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
                       <span
                         key={n}
-                        className="text-[9px] leading-tight flex items-center justify-center"
+                        className="text-[8px] sm:text-[9px] leading-tight flex items-center justify-center"
                         style={{
                           color: 'var(--sudoku-note-color)',
                           fontWeight: 500,

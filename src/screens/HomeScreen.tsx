@@ -40,12 +40,12 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   };
 
   return (
-    <div className="w-full max-w-[390px] mx-auto flex flex-col justify-between py-6 px-4 select-none min-h-[780px]">
+    <div className="w-full max-w-[440px] mx-auto flex flex-col justify-start py-3.5 px-3.5 sm:py-5 sm:px-4 select-none gap-3 sm:gap-4">
       {/* Top Brand Header */}
-      <div className="text-center pt-2 pb-4">
+      <div className="text-center pt-1 pb-2 sm:pt-2 sm:pb-3">
         {/* Sudoku Icon */}
-        <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#E2ECDA] dark:bg-[#20291B] border border-[#BACAA8] dark:border-[#35412B] mb-3 shadow-xs transition-colors">
-          <div className="grid grid-cols-3 gap-1 w-6 h-6">
+        <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#E2ECDA] dark:bg-[#20291B] border border-[#BACAA8] dark:border-[#35412B] mb-2 sm:mb-3 shadow-xs transition-colors">
+          <div className="grid grid-cols-3 gap-1 w-5 h-5 sm:w-6 sm:h-6">
             <div className="rounded-[2px] bg-[#222D1D] dark:bg-[#AEBB7A]" />
             <div className="rounded-[2px] bg-[#899E7C] dark:bg-[#7F8F55]" />
             <div className="rounded-[2px] bg-[#222D1D] dark:bg-[#AEBB7A]" />
@@ -58,16 +58,16 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
           </div>
         </div>
 
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-widest text-[#1E2818] dark:text-[#F1F3E8] uppercase transition-colors">
+        <h1 className="text-xl sm:text-3xl font-extrabold tracking-widest text-[#1E2818] dark:text-[#F1F3E8] uppercase transition-colors">
           SUDOKU
         </h1>
-        <p className="text-xs text-[#5C6E52] dark:text-[#AEB79B] mt-1 font-medium tracking-wide transition-colors">
+        <p className="text-[11px] sm:text-xs text-[#5C6E52] dark:text-[#AEB79B] mt-0.5 sm:mt-1 font-medium tracking-wide transition-colors">
           Clear your mind. Solve one board at a time.
         </p>
       </div>
 
       {/* Main Content Area */}
-      <div className="flex flex-col gap-3.5 my-auto">
+      <div className="flex flex-col gap-3 sm:gap-3.5">
         {/* Journey Progress Card */}
         <div className="bg-[#E7EFE0] dark:bg-[#20291B] rounded-2xl p-3.5 border border-[#D1DECA] dark:border-[#35412B] transition-colors">
           <div className="flex items-center justify-between text-xs font-semibold mb-2">

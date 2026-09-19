@@ -74,9 +74,9 @@ export const LevelSelectScreen: React.FC<LevelSelectScreenProps> = ({
   ];
 
   return (
-    <div className="w-full max-w-[390px] mx-auto flex flex-col justify-between select-none min-h-[780px] pb-24">
+    <div className="w-full max-w-[440px] mx-auto flex flex-col justify-start select-none pb-20 sm:pb-24 gap-3 sm:gap-4">
       {/* Top App Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-[#D5DFC9] dark:border-[#35412B] bg-[#EAF0E2] dark:bg-[#192016] transition-colors">
+      <div className="flex items-center justify-between px-3 py-2 sm:px-4 sm:py-2.5 border-b border-[#D5DFC9] dark:border-[#35412B] bg-[#EAF0E2] dark:bg-[#192016] transition-colors rounded-t-xl">
         <button
           id="btn-levels-back"
           type="button"
@@ -97,7 +97,7 @@ export const LevelSelectScreen: React.FC<LevelSelectScreenProps> = ({
       </div>
 
       {/* Main Content */}
-      <div className="px-4 pt-4 flex flex-col gap-4">
+      <div className="px-3.5 pt-3 sm:px-4 sm:pt-4 flex flex-col gap-3.5 sm:gap-4">
         {/* Title & Total Badge */}
         <div>
           <div className="flex items-center justify-between">
@@ -215,7 +215,7 @@ export const LevelSelectScreen: React.FC<LevelSelectScreenProps> = ({
       </div>
 
       {/* Sticky Bottom Floating Bar: "Continue Level X" */}
-      <div className="fixed bottom-3 left-0 right-0 max-w-[390px] mx-auto px-4 z-30">
+      <div className="fixed bottom-3 left-1/2 -translate-x-1/2 w-full max-w-[420px] px-3 sm:px-4 z-30">
         <div className="bg-[#212C1B] dark:bg-[#20291B] rounded-2xl p-3 border border-[#212C1B] dark:border-[#35412B] shadow-lg flex items-center justify-between text-white dark:text-[#F1F3E8] transition-colors">
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl bg-[#34442A] dark:bg-[#303B27] border border-[#485E3B] dark:border-[#465438] flex items-center justify-center font-bold text-sm text-white dark:text-[#DCE4C9]">

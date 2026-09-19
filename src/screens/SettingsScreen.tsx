@@ -44,9 +44,9 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ onBack }) => {
   };
 
   return (
-    <div className="w-full max-w-[390px] mx-auto flex flex-col justify-between select-none min-h-[780px] pb-8">
+    <div className="w-full max-w-[440px] mx-auto flex flex-col justify-start select-none pb-4 sm:pb-6 gap-3 sm:gap-4">
       {/* Top Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-[#D5DFC9] dark:border-[#35412B] bg-[#EAF0E2] dark:bg-[#192016] transition-colors">
+      <div className="flex items-center justify-between px-3 py-2 sm:px-4 sm:py-2.5 border-b border-[#D5DFC9] dark:border-[#35412B] bg-[#EAF0E2] dark:bg-[#192016] transition-colors rounded-t-xl">
         <button
           id="btn-settings-back"
           type="button"
@@ -67,7 +67,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ onBack }) => {
       </div>
 
       {/* Content */}
-      <div className="px-4 pt-3 flex flex-col gap-4">
+      <div className="px-3.5 pt-3 sm:px-4 sm:pt-3 flex flex-col gap-3.5 sm:gap-4">
         {/* Subheader */}
         <div>
           <span className="text-[10px] font-black tracking-wider uppercase text-[#475C3B] dark:text-[#AEBB7A] block transition-colors">

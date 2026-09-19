@@ -188,9 +188,9 @@ export const GameScreen: React.FC<GameScreenProps> = ({
   };
 
   return (
-    <div className="w-full max-w-[390px] mx-auto flex flex-col justify-between select-none min-h-[780px] pb-3 relative">
+    <div className="w-full max-w-[440px] mx-auto flex flex-col justify-start select-none py-1.5 sm:py-3 px-2.5 sm:px-4 relative gap-1.5 sm:gap-2">
       {/* Top Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-[#D5DFC9] dark:border-[#35412B] bg-[#EAF0E2] dark:bg-[#192016] transition-colors">
+      <div className="flex items-center justify-between px-3 py-2 sm:px-4 sm:py-2.5 border-b border-[#D5DFC9] dark:border-[#35412B] bg-[#EAF0E2] dark:bg-[#192016] transition-colors rounded-t-xl">
         <button
           id="btn-game-back"
           type="button"
@@ -211,7 +211,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       </div>
 
       {/* Subheader Level pill & Pause button */}
-      <div className="px-4 pt-3 flex items-center justify-between">
+      <div className="px-2 pt-1 sm:px-4 sm:pt-2 flex items-center justify-between">
         <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#E2ECDA] dark:bg-[#20291B] text-[#26371D] dark:text-[#F1F3E8] border border-[#CBD8BF] dark:border-[#35412B] tracking-wide transition-colors">
           LEVEL {levelNumber} • {difficultyLabel}
         </span>
@@ -228,8 +228,8 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       </div>
 
       {/* Stats Row: Time & Mistakes */}
-      <div className="px-4 pt-2.5 pb-1 flex items-center justify-between text-xs font-bold text-[#242F1E] dark:text-[#F1F3E8] transition-colors">
-        <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white dark:bg-[#192016] border border-[#D5DFC9] dark:border-[#35412B] shadow-xs transition-colors">
+      <div className="px-2 pt-1 pb-0.5 sm:px-4 flex items-center justify-between text-xs font-bold text-[#242F1E] dark:text-[#F1F3E8] transition-colors">
+        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-white dark:bg-[#192016] border border-[#D5DFC9] dark:border-[#35412B] shadow-xs transition-colors">
           <Clock className="w-3.5 h-3.5 text-[#5B6E4F] dark:text-[#AEBB7A]" />
           <span className="text-[10px] text-[#697B5E] dark:text-[#AEB79B] tracking-wider uppercase font-bold transition-colors">
             TIME
@@ -237,7 +237,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
           <span className="font-extrabold">{formattedTime}</span>
         </div>
 
-        <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white dark:bg-[#192016] border border-[#D5DFC9] dark:border-[#35412B] shadow-xs transition-colors">
+        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-white dark:bg-[#192016] border border-[#D5DFC9] dark:border-[#35412B] shadow-xs transition-colors">
           <Flag className="w-3.5 h-3.5 text-[#C0392B] dark:text-[#E58A82]" />
           <span className="text-[10px] text-[#697B5E] dark:text-[#AEB79B] tracking-wider uppercase font-bold transition-colors">
             MISTAKES
@@ -249,7 +249,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       </div>
 
       {/* 9x9 Sudoku Board */}
-      <div className="px-4 py-1.5 flex justify-center">
+      <div className="px-2 py-0.5 sm:px-4 sm:py-1 flex justify-center w-full">
         <SudokuBoard
           board={board}
           selectedCell={selectedCell}
@@ -259,7 +259,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       </div>
 
       {/* Controls Row: Undo, Erase, Notes, Hint */}
-      <div className="px-4 py-1">
+      <div className="px-2 py-0.5 sm:px-4 sm:py-1">
         <GameControls
           isNotesMode={notesActive}
           hintsRemaining={hintsRemaining}
@@ -277,7 +277,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       </div>
 
       {/* Number Pad: 1-9 in horizontal strip with remaining counts */}
-      <div className="px-4 py-1">
+      <div className="px-2 py-0.5 sm:px-4 sm:py-1">
         <NumberPad
           numberCounts={numberCounts}
           selectedNumber={activeDigit}
@@ -286,7 +286,7 @@ export const GameScreen: React.FC<GameScreenProps> = ({
       </div>
 
       {/* Bottom Footer: Hint Tip */}
-      <div className="px-4 pt-1 flex items-center justify-between text-[11px] text-[#4E6240] dark:text-[#AEB79B] border-t border-[#D5DFC9]/70 dark:border-[#35412B]/70 mt-1 transition-colors">
+      <div className="px-2 pt-1 flex items-center justify-between text-[11px] text-[#4E6240] dark:text-[#AEB79B] border-t border-[#D5DFC9]/70 dark:border-[#35412B]/70 mt-0.5 transition-colors">
         <div className="flex items-center gap-1.5 font-medium">
           <Lightbulb className="w-3.5 h-3.5 text-[#546A44] dark:text-[#AEBB7A]" />
           <span>Find the solitary row note</span>

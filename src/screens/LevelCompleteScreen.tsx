@@ -25,9 +25,9 @@ export const LevelCompleteScreen: React.FC<LevelCompleteScreenProps> = ({
   onBack,
 }) => {
   return (
-    <div className="w-full max-w-[390px] mx-auto flex flex-col justify-between select-none min-h-[780px]">
+    <div className="w-full max-w-[440px] mx-auto flex flex-col justify-start select-none pb-4 sm:pb-6 gap-3 sm:gap-4">
       {/* Top Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-[#D5DFC9] dark:border-[#35412B] bg-[#EAF0E2] dark:bg-[#192016] transition-colors">
+      <div className="flex items-center justify-between px-3 py-2 sm:px-4 sm:py-2.5 border-b border-[#D5DFC9] dark:border-[#35412B] bg-[#EAF0E2] dark:bg-[#192016] transition-colors rounded-t-xl">
         <button
           id="btn-complete-back"
           type="button"
@@ -48,7 +48,7 @@ export const LevelCompleteScreen: React.FC<LevelCompleteScreenProps> = ({
       </div>
 
       {/* Main Centered Card */}
-      <div className="p-4 my-auto">
+      <div className="px-3.5 pt-2 sm:px-4 sm:pt-3">
         <div className="bg-white dark:bg-[#192016] rounded-2xl border border-[#D5DFC9] dark:border-[#35412B] p-6 shadow-sm text-center transition-colors">
           {/* Trophy Badge */}
           <div className="w-12 h-12 mx-auto mb-2.5 rounded-full bg-[#EAF0E2] dark:bg-[#273322] border border-[#BACAA8] dark:border-[#35412B] flex items-center justify-center text-[#3D5230] dark:text-[#AEBB7A] transition-colors">

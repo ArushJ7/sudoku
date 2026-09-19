@@ -26,9 +26,9 @@ export const AchievementsScreen: React.FC<AchievementsScreenProps> = ({ onBack }
   };
 
   return (
-    <div className="w-full max-w-[390px] mx-auto flex flex-col justify-between select-none min-h-[780px] pb-6">
+    <div className="w-full max-w-[440px] mx-auto flex flex-col justify-start select-none pb-4 sm:pb-6 gap-3 sm:gap-4">
       {/* Top Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-[#D5DFC9] dark:border-[#35412B] bg-[#EAF0E2] dark:bg-[#192016] transition-colors">
+      <div className="flex items-center justify-between px-3 py-2 sm:px-4 sm:py-2.5 border-b border-[#D5DFC9] dark:border-[#35412B] bg-[#EAF0E2] dark:bg-[#192016] transition-colors rounded-t-xl">
         <button
           id="btn-achievements-back"
           type="button"
@@ -49,7 +49,7 @@ export const AchievementsScreen: React.FC<AchievementsScreenProps> = ({ onBack }
       </div>
 
       {/* Main Content */}
-      <div className="px-4 pt-4 flex flex-col gap-4">
+      <div className="px-3.5 pt-3 sm:px-4 sm:pt-4 flex flex-col gap-3.5 sm:gap-4">
         {/* Title & Subtitle */}
         <div>
           <h1 className="text-xl font-black text-[#1E2818] dark:text-[#F1F3E8] tracking-tight transition-colors">
