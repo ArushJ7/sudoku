@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --app-bg: #EAF0E2;
+    --main-container-bg: #EAF0E2;
+    --app-dot: #CBD8C2;
+    --text-main: #212C1B;
+    --text-secondary: #4E6340;
+    --text-muted: #5D7053;
+    --text-title: #1E2818;
+    
+    --card-bg: #FFFFFF;
+    --card-border: #D5DFC9;
+    --card-subtle-bg: #E7EFE0;
+    --card-elevated-bg: #F5F8F2;
+    --header-bg: rgba(250, 253, 247, 0.95);
+
+    --accent-olive: #4E6340;
+    --accent-olive-deep: #212C1B;
+    --badge-bg: #E5EEDF;
+    --badge-text: #344629;
+    --badge-border: #CAD7C0;
+
+    --btn-primary-bg: #212C1B;
+    --btn-primary-hover: #1A2315;
+    --btn-primary-text: #FFFFFF;
+    --btn-secondary-bg: #FFFFFF;
+    --btn-secondary-hover: #F3F7EE;
+    --btn-secondary-text: #1E2818;
+    --btn-secondary-border: #D5DFC9;
+
+    --arrow-btn-bg: #34442B;
+    --arrow-btn-border: #485D3B;
+    --arrow-btn-icon: #FFFFFF;
+    
+    --sudoku-board-border: #242F1E;
+    --sudoku-board-surface: #FAFCF7;
+    --sudoku-grid-line: #D4DEC9;
+    --sudoku-block-border: #242F1E;
+    --sudoku-cell-bg: #FFFFFF;
+    --sudoku-cell-selected: #DCE6D2;
+    --sudoku-cell-selected-ring: #3D4F30;
+    --sudoku-cell-related: #F5F8F2;
+    --sudoku-cell-same: #E5EEE0;
+    
+    --sudoku-given-color: #1B2416;
+    --sudoku-user-color: #2E6B1F;
+    --sudoku-error-color: #C0392B;
+    --sudoku-error-bg: #FADBD8;
+    --sudoku-note-color: #4B5C3F;
+  }
+
+  [data-theme="dark"] {
+    --app-bg: #11160F;
+    --main-container-bg: #151B12;
+    --app-dot: #1E271B;
+    --text-main: #F1F3E8;
+    --text-secondary: #C2C9B5;
+    --text-muted: #8F997F;
+    --text-title: #F1F3E8;
+
+    --card-bg: #192016;
+    --card-border: #35412B;
+    --card-subtle-bg: #20291B;
+    --card-elevated-bg: #273322;
+    --header-bg: rgba(21, 27, 18, 0.95);
+
+    --accent-olive: #AEBB7A;
+    --accent-olive-deep: #7F8F55;
+    --badge-bg: #20291B;
+    --badge-text: #AEBB7A;
+    --badge-border: #35412B;
+
+    --btn-primary-bg: #273322;
+    --btn-primary-hover: #303F2A;
+    --btn-primary-text: #F1F3E8;
+    --btn-secondary-bg: #192016;
+    --btn-secondary-hover: #20291B;
+    --btn-secondary-text: #F1F3E8;
+    --btn-secondary-border: #35412B;
+
+    --arrow-btn-bg: #303B27;
+    --arrow-btn-border: #465438;
+    --arrow-btn-icon: #DCE4C9;
+    
+    /* Board container: slightly elevated from page */
+    --sudoku-board-border: #3D4D32;
+    --sudoku-board-surface: #1B2318;
+    /* Thin grid lines: subtle but visible separation */
+    --sudoku-grid-line: #2C3826;
+    /* 3x3 block borders: strongest visual element on the board */
+    --sudoku-block-border: #8BA27E;
+    /* Cell surfaces: slightly lighter than board for depth */
+    --sudoku-cell-bg: #232D1F;
+    /* Selected cell: warm olive highlight, clearly distinct */
+    --sudoku-cell-selected: #3A4E2E;
+    --sudoku-cell-selected-ring: #8BA27E;
+    /* Related row/col/block: very subtle lift */
+    --sudoku-cell-related: #283526;
+    /* Same-value highlight: distinct from related */
+    --sudoku-cell-same: #344628;
+    
+    /* Given numbers: warm parchment white, highest contrast */
+    --sudoku-given-color: #E8EBDD;
+    /* Player-entered numbers: olive-green accent, clearly different from givens */
+    --sudoku-user-color: #AFCB78;
+    /* Error: warm red, not neon */
+    --sudoku-error-color: #E58A82;
+    --sudoku-error-bg: #3D2422;
+    /* Notes: mid-tone olive, readable but subordinate */
+    --sudoku-note-color: #9AA88C;
+  }
+
+  [data-contrast="high"] {
+    --card-border: #1B2416;
+    --sudoku-grid-line: #8BA27E;
+    --sudoku-block-border: #000000;
+  }
+
+  [data-theme="dark"][data-contrast="high"] {
+    --card-border: #48593A;
+    --card-subtle-border: #3D4C30;
+    --text-main: #FFFFFF;
+    --text-secondary: #DCE4C9;
+    --text-muted: #A3B293;
+    --accent-olive: #BCE784;
+    --sudoku-board-border: #5A7048;
+    --sudoku-board-surface: #1B2318;
+    --sudoku-grid-line: #48593A;
+    --sudoku-block-border: #A9C47F;
+    --sudoku-cell-bg: #263220;
+    --sudoku-cell-selected: #3F5534;
+    --sudoku-cell-selected-ring: #A9C47F;
+    --sudoku-given-color: #FFFFFF;
+    --sudoku-user-color: #BCE784;
+    --sudoku-note-color: #B5C2A5;
+  }
+
+  body {
+    font-family: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--app-bg);
+    color: var(--text-main);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(var(--app-dot) 1.2px, transparent 1.2px);
+  background-size: 16px 16px;
+}

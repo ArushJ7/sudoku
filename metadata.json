@@ -1,0 +1,6 @@
+{
+  "name": "Sudoku",
+  "description": "Minimal, calm, and puzzle-focused Sudoku game frontend featuring an olive green palette and responsive 9x9 board.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
