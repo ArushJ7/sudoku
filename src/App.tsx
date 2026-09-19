@@ -189,9 +189,9 @@ export default function App() {
       </header>
 
       {/* Main App Canvas */}
-      <main className="flex-1 flex flex-col items-center justify-start py-2.5 px-2 sm:py-6 sm:px-4">
+      <main className="flex-1 flex flex-col items-center justify-start py-3 px-4 sm:py-6 sm:px-4">
         <div className="w-full max-w-[440px] mx-auto">
-          <div className="bg-[var(--app-bg)] dark:bg-[#151B12] rounded-2xl sm:rounded-3xl border border-[#D5DFC9] sm:border-2 dark:border-[#35412B] shadow-lg overflow-hidden flex flex-col relative transition-colors duration-200">
+          <div className="bg-[var(--app-bg)] rounded-2xl sm:rounded-3xl border border-[#D5DFC9] sm:border-2 shadow-lg overflow-hidden flex flex-col relative transition-colors duration-200">
             {renderScreenComponent(currentScreen)}
           </div>
         </div>
